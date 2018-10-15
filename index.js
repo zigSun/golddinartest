@@ -3,7 +3,7 @@ process.stdout.isTTY = true;
 var cluster = require('cluster');
 
 if (cluster.isMaster) {
-    require('./master');
+    require('./src/master');
 } else {
-    require('./worker');
+    require('./src/worker');
 }
